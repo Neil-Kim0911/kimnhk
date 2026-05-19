@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Projects</title>
+  <meta name="description" content="Check out my latest projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">NeilKim</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main style="padding-top: 100px;"> <!-- Push content below fixed header -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section" style="padding-top: 20px;">
+      <h1 class="section-title">My Work</h1>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="project1.jpg" alt="Concert Merch Poster Scan">
+          </div>
+          <div class="project-content">
+            <h3>Project 1</h3>
+            <p>I created a large format print by scanning concert merch and transforming it into a poster through photoshop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Neil Kim. Built with HTML & CSS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
