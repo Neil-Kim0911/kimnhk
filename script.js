@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         // Set initial icon
         themeToggle.innerHTML = document.documentElement.getAttribute('data-theme') === 'light' ? '🌙' : '☀️';
-<<<<<<< HEAD
 
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -17,16 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme); // Save preference
 
-=======
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme); // Save preference
-            
->>>>>>> f8c336bb406a655350791880da103e2f6f0af556
             // Update icon
             themeToggle.innerHTML = newTheme === 'light' ? '🌙' : '☀️';
         });
@@ -39,11 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navLinks) {
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> f8c336bb406a655350791880da103e2f6f0af556
             // Toggle hamburger / close icon
             if (navLinks.classList.contains('active')) {
                 mobileToggle.innerHTML = '✕';
@@ -61,11 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> f8c336bb406a655350791880da103e2f6f0af556
             // Close mobile menu if open
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
@@ -76,15 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-<<<<<<< HEAD
 
             const targetElement = document.querySelector(targetId);
 
-=======
-            
-            const targetElement = document.querySelector(targetId);
-            
->>>>>>> f8c336bb406a655350791880da103e2f6f0af556
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
