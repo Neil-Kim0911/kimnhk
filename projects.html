@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Add model-viewer script for 3D glb files -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +48,24 @@
           </div>
           <div class="project-content">
             <h3>Project 1</h3>
-            <p>I created a large format print by scanning concert merch and transforming it into a poster through photoshop.</p>
+            <p>I created a large format print by scanning concert merch and transforming it into a poster through
+              photoshop.</p>
+          </div>
+        </div>
+        <!-- 3D Model Project -->
+        <div class="project-card">
+          <div class="project-image" style="height: 300px; display: flex; align-items: center; justify-content: center; background-color: var(--secondary-color, #f9f9f9);">
+            <model-viewer 
+              src="slidesinterctive.glb" 
+              alt="Interactive 3D Model" 
+              auto-rotate 
+              camera-controls 
+              style="width: 100%; height: 100%;">
+            </model-viewer>
+          </div>
+          <div class="project-content">
+            <h3>Interactive 3D Artwork</h3>
+            <p>An interactive 3D model that you can rotate and zoom.</p>
           </div>
         </div>
       </div>
