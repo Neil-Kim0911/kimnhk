@@ -75,13 +75,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.lightbox-close');
 
     if (lightbox && lightboxImg) {
+        // Handle Images
         document.querySelectorAll('.project-image img').forEach(img => {
             img.addEventListener('click', function() {
                 lightbox.style.display = 'flex';
                 lightbox.style.justifyContent = 'center';
                 lightbox.style.alignItems = 'center';
+                
+                // Show Image, Hide Model
                 lightboxImg.src = this.src;
+                lightboxImg.style.display = 'block';
+                const lightboxModel = document.getElementById('lightbox-model');
+                if(lightboxModel) lightboxModel.style.display = 'none';
+
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+
+        // Handle 3D Models
+        document.querySelectorAll('.project-image model-viewer').forEach(model => {
+            model.addEventListener('click', function() {
+                lightbox.style.display = 'flex';
+                lightbox.style.justifyContent = 'center';
+                lightbox.style.alignItems = 'center';
+                
+                // Show Model, Hide Image
+                lightboxImg.style.display = 'none';
+                const lightboxModel = document.getElementById('lightbox-model');
+                if(lightboxModel) {
+                    lightboxModel.src = this.src;
+                    lightboxModel.style.display = 'block';
+                }
+
+                document.body.style.overflow = 'hidden';
             });
         });
 
@@ -93,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Close on clicking outside the image
+        // Close on clicking outside the media
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
                 lightbox.style.display = 'none';
