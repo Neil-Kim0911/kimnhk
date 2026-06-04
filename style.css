@@ -362,7 +362,8 @@ nav {
   text-decoration: none;
 }
 
-.project-image img {
+.project-image img,
+.project-image model-viewer {
   cursor: pointer;
 }
 

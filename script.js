@@ -72,12 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lightbox Functionality
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxModel = document.getElementById('lightbox-model');
     const closeBtn = document.querySelector('.lightbox-close');
 
     if (lightbox && lightboxImg) {
         // Handle Images
         document.querySelectorAll('.project-image img').forEach(img => {
-            img.addEventListener('click', function() {
+            img.addEventListener('click', function () {
                 lightbox.style.display = 'flex';
                 lightbox.style.justifyContent = 'center';
                 lightbox.style.alignItems = 'center';
@@ -85,8 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Show Image, Hide Model
                 lightboxImg.src = this.src;
                 lightboxImg.style.display = 'block';
-                const lightboxModel = document.getElementById('lightbox-model');
-                if(lightboxModel) lightboxModel.style.display = 'none';
+                if (lightboxModel) lightboxModel.style.display = 'none';
 
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
             });
@@ -94,15 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle 3D Models
         document.querySelectorAll('.project-image model-viewer').forEach(model => {
-            model.addEventListener('click', function() {
+            model.addEventListener('click', function () {
                 lightbox.style.display = 'flex';
                 lightbox.style.justifyContent = 'center';
                 lightbox.style.alignItems = 'center';
 
                 // Show Model, Hide Image
                 lightboxImg.style.display = 'none';
-                const lightboxModel = document.getElementById('lightbox-model');
-                if(lightboxModel) {
+                if (lightboxModel) {
                     lightboxModel.src = this.src;
                     lightboxModel.style.display = 'block';
                 }
